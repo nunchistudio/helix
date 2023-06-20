@@ -1,0 +1,35 @@
+{
+  "integrations": [
+    {
+      "id": "rest",
+      "name": "REST router",
+      "description": "for building REST APIs"
+    },
+    {
+      "id": "nats",
+      "name": "NATS JetStream",
+      "description": "for distributed systems"
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL",
+      "description": "as OLTP database"
+    },
+    {
+      "id": "clickhouse",
+      "name": "ClickHouse",
+      "description": "as OLAP database"
+    },
+    {
+      "id": "vault",
+      "name": "Vault",
+      "description": "for secret management"
+    },
+    {
+      "id": "temporal",
+      "name": "Temporal",
+      "description": "for workflow orchestration",
+      "soon": true
+    }
+  ]
+}

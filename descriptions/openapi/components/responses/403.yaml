@@ -1,0 +1,23 @@
+description: "Forbidden"
+
+content:
+  application/json:
+    schema:
+      properties:
+        status:
+          type: "string"
+          example: "Forbidden"
+        error:
+          type: "object"
+          x-go-type: "errorstack.Error"
+          x-go-type-import:
+            path: "go.nunchi.studio/helix/errorstack"
+          properties:
+            message:
+              type: "string"
+              example: "API key doesn't have permissions to perform the request"
+          required:
+            - "message"
+      required:
+        - "status"
+        - "error"

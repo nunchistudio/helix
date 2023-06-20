@@ -1,0 +1,23 @@
+description: "Internal Server Error"
+
+content:
+  application/json:
+    schema:
+      properties:
+        status:
+          type: "string"
+          example: "Internal Server Error"
+        error:
+          type: "object"
+          x-go-type: "errorstack.Error"
+          x-go-type-import:
+            path: "go.nunchi.studio/helix/errorstack"
+          properties:
+            message:
+              type: "string"
+              example: "We have been notified of this unexpected internal error"
+          required:
+            - "message"
+      required:
+        - "status"
+        - "error"

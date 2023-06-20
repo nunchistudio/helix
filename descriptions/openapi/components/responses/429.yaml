@@ -1,0 +1,23 @@
+description: "Too Many Requests"
+
+content:
+  application/json:
+    schema:
+      properties:
+        status:
+          type: "string"
+          example: "Too Many Requests"
+        error:
+          type: "object"
+          x-go-type: "errorstack.Error"
+          x-go-type-import:
+            path: "go.nunchi.studio/helix/errorstack"
+          properties:
+            message:
+              type: "string"
+              example: "Request-rate limit has been reached"
+          required:
+            - "message"
+      required:
+        - "status"
+        - "error"

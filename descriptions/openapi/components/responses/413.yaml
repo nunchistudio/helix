@@ -1,0 +1,23 @@
+description: "Payload Too Large"
+
+content:
+  application/json:
+    schema:
+      properties:
+        status:
+          type: "string"
+          example: "Payload Too Large"
+        error:
+          type: "object"
+          x-go-type: "errorstack.Error"
+          x-go-type-import:
+            path: "go.nunchi.studio/helix/errorstack"
+          properties:
+            message:
+              type: "string"
+              example: "Can not process payload too large"
+          required:
+            - "message"
+      required:
+        - "status"
+        - "error"

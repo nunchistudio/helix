@@ -1,0 +1,40 @@
+description: "Bad Request"
+
+content:
+  application/json:
+    schema:
+      properties:
+        status:
+          type: "string"
+          example: "Bad Request"
+        error:
+          type: "object"
+          x-go-type: "errorstack.Error"
+          x-go-type-import:
+            path: "go.nunchi.studio/helix/errorstack"
+          properties:
+            message:
+              type: "string"
+              example: "Failed to validate request"
+            validations:
+              type: "array"
+              items:
+                type: "object"
+                properties:
+                  message:
+                    type: "string"
+                    example: "Property \"name\" is missing"
+                  path:
+                    type: "array"
+                    items:
+                      type: "string"
+                    example:
+                      - "request"
+                      - "body"
+                      - "event"
+                      - "name"
+          required:
+            - "message"
+      required:
+        - "status"
+        - "error"

@@ -1,0 +1,11 @@
+description: "Accepted"
+
+content:
+  application/json:
+    schema:
+      properties:
+        status:
+          type: "string"
+          example: "Accepted"
+      required:
+        - "status"

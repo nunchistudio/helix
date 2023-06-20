@@ -1,0 +1,305 @@
+type: "object"
+x-internal: true
+x-go-type: "event.Event"
+x-go-type-import:
+  path: "go.nunchi.studio/helix/event"
+properties:
+  name:
+    type: "string"
+    description: |
+      Name of the event that a client (user, device) has performed.
+    example: "user.registered"
+  meta:
+    type: "object"
+    description: |
+      Free key-value store to provide additional metadata about the event.
+    additionalProperties:
+      type: "string"
+    example:
+      key: "value"
+  params:
+    type: "object"
+    description: |
+      HTTP request params passed by the client triggering the event.
+    additionalProperties:
+      type: "array"
+      items:
+        type: "string"
+    example:
+      filter:
+        - "one"
+        - "two"
+      search:
+        - "custom query"
+  is_anonymous:
+    type: "boolean"
+    description: |
+      Informs if the client triggering the event is related to an anonymous
+      user.
+    example: false
+  user_id:
+    type: "string"
+    description: |
+      Unique identifier of the user triggering the event.
+    example: "d50825a9-0feb-4e63-9b16-3ec6fe76e0e6"
+  group_id:
+    type: "string"
+    description: |
+      Unique identifier of the group triggering the event.
+    example: "60d58518-78b3-4739-afa5-71e2dab2b91f"
+  subscription:
+    type: "object"
+    description: |
+      Holds the details about the account/customer from which the event has
+      been triggered. It's useful for tracking customer usages.
+    properties:
+      id:
+        type: "string"
+        example: "sub_2NqIQtvdSEyPnDJl09eZGCajDDj"
+      customer_id:
+        type: "string"
+        example: "cus_2NqITqoYLIGSR7Ac06Sd6saihUm"
+      plan_id:
+        type: "string"
+        example: "plan_2NqITpRSxizBwnfWY7Rnk9uPrOu"
+      usage:
+        type: "string"
+        example: "demo.request"
+      increment_by:
+        type: "number"
+        example: 1
+      flags:
+        type: "object"
+        additionalProperties:
+          type: "string"
+        example:
+          version: "blue"
+  app:
+    type: "object"
+    description: |
+      Holds the details about the client application executing the event.
+    properties:
+      name:
+        type: "string"
+        example: "demo-app"
+      version:
+        type: "string"
+        example: 2.3.1
+      build_id:
+        type: "string"
+        example: "2.3.1-abcde"
+  library:
+    type: "object"
+    description: |
+      Holds the details of the SDK used by the client executing the event.
+    properties:
+      name:
+        type: "string"
+        example: "helix.go"
+      version:
+        type: "string"
+        example: "1.0.0"
+  campaign:
+    type: "object"
+    description: |
+      Holds the details about the marketing campaign from which a client is
+      executing the event from.
+    properties:
+      name:
+        type: "string"
+        example: "Hello World Campaign"
+      source:
+        type: "string"
+        example: "newsletter"
+      medium:
+        type: "string"
+        example: "email"
+      term:
+        type: "string"
+        example: "button downloads"
+      content:
+        type: "string"
+        example: "Hello World"
+  referrer:
+    type: "object"
+    description: |
+      Holds the details about the marketing referrer from which a client is
+      executing the event from.
+    properties:
+      type:
+        type: "string"
+        example: "seo"
+      name:
+        type: "string"
+        example: "Example"
+      url:
+        type: "string"
+        example: "https://example.com"
+      link:
+        type: "string"
+        example: "https://hello.world/link"
+  cloud:
+    type: "object"
+    description: |
+      Holds the details about the cloud provider from which the client is
+      executing the event.
+    properties:
+      provider:
+        type: "string"
+        example: "aws"
+      service:
+        type: "string"
+        example: "ec2"
+      region:
+        type: "string"
+        example: "us-west-2"
+      project_id:
+        type: "string"
+        example: "production"
+      account_id:
+        type: "string"
+        example: "arn:aws:iam::123456789012:user/johndoe"
+  device:
+    type: "object"
+    description: |
+      Holds the details about the user's device.
+    properties:
+      id:
+        type: "string"
+        example: "e51d218b-6ca6-4e36-9c21-11a649301a52"
+      manufacturer:
+        type: "string"
+        example: "Apple"
+      model:
+        type: "string"
+        example: "iPhone"
+      name:
+        type: "string"
+        example: "customname"
+      type:
+        type: "string"
+        example: "iPhone"
+      version:
+        type: "string"
+        example: "14"
+      advertising_id:
+        type: "string"
+        example: "8d391abe-8a26-439d-9d37-b8cd5b9f91a5"
+  os:
+    type: "object"
+    description: |
+      Holds the details about the user's OS.
+    properties:
+      name:
+        type: "string"
+        example: "macOS"
+      arch:
+        type: "string"
+        example: "arm64"
+      version:
+        type: "string"
+        example: "13.3"
+  location:
+    type: "object"
+    description: |
+      Holds the details about the user's location.
+    properties:
+      city:
+        type: "string"
+        example: "Annecy"
+      country:
+        type: "string"
+        example: "France"
+      region:
+        type: "string"
+        example: "Auvergne-Rhône-Alpes"
+      latitude:
+        type: "number"
+        example: 45.899247
+      longitude:
+        type: "number"
+        example: 6.129384
+      speed:
+        type: "number"
+        example: 35
+  network:
+    type: "object"
+    description: |
+      Holds the details about the user's network.
+    properties:
+      bluetooth:
+        type: "boolean"
+        example: false
+      cellular:
+        type: "boolean"
+        example: false
+      wifi:
+        type: "boolean"
+        example: true
+      carrier:
+        type: "string"
+        example: "Orange FR"
+  page:
+    type: "object"
+    description: |
+      Holds the details about the webpage from which the event is triggered
+      from.
+    properties:
+      path:
+        type: "string"
+        example: "/contact"
+      referrer:
+        type: "string"
+        example: "example.org"
+      search:
+        type: "string"
+        example: "custom query"
+      title:
+        type: "string"
+        example: "Contact - Hello World"
+      url:
+        type: "string"
+        example: "https://hello.world/contact"
+  screen:
+    type: "object"
+    description: |
+      Holds the details about the app's screen from which the event is
+      triggered from.
+    properties:
+      density:
+        type: "number"
+        example: 2
+      width:
+        type: "number"
+        example: 320
+      height:
+        type: "number"
+        example: 568
+  ip:
+    type: "string"
+    description: |
+      IP address of the current user.
+    example: "85.88.182.121"
+  locale:
+    type: "string"
+    description: |
+      Locale of the current user.
+    example: "fr-FR"
+  timezone:
+    type: "string"
+    description: |
+      User timezone information which might be stripped from the timestamp.
+    example: "Europe/Paris"
+  user_agent:
+    type: "string"
+    description: |
+      User agent of the device making the request.
+    example: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) ..."
+  timestamp:
+    type: "string"
+    format: "date-time"
+    description: |
+      Timestamp when the event itself actually happened.
+    example: "2023-08-24T14:15:22Z"
+required:
+  - "name"
