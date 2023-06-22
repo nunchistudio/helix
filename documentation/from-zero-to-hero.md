@@ -96,7 +96,7 @@ $ export OTEL_TRACES_ENDPOINT=localhost:7021
 
 Now that you're all set with an OpenTelemetry stack, you can write your first
 helix service. This service will expose a HTTP endpoint on `POST /anything`,
-using the [REST router integration](/helix/integrations/rest).
+using the [REST router integration](/helix/integration/rest).
 
 {% tab name="Go" %}
   {% partial file="helix-go/from-zero-to-hero-first.md" /%} 
@@ -133,7 +133,7 @@ error recording with event propagation across services.
 
 ### Running NATS locally
 
-To leverage the [NATS JetStream integration](/helix/integrations/nats), we must
+To leverage the [NATS JetStream integration](/helix/integration/nats), we must
 have a NATS server up and running with JetStream enabled. Let's start one with
 Docker:
 ```sh
