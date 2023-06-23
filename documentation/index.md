@@ -57,4 +57,5 @@ services and integrations.
 By using helix, organizations can benefit from automatic distributed tracing,
 error recording, and event propagation across their stack with no additional
 lines of code!
+
 ![Event propagation with helix](/helix/screenshots/trace-distributed.png)

@@ -120,6 +120,7 @@ The JSON response should be:
 In Grafana, go to the "*Explore*" section at <http://localhost:3000/explore>.
 Select "*Tempo*" as datasource, and search for traces in `httpapi` service. You
 should see your first trace:
+
 ![Your first trace with helix](/helix/screenshots/trace-simple.png)
 
 It's important to notice here that the only observability step we did on the
@@ -181,6 +182,7 @@ $ curl --request POST \
 ```
 
 Let's see how it looks in Grafana "*Explore*" section:
+
 ![Your second trace with helix](/helix/screenshots/trace-distributed.png)
 
 As you can notice, the span `Custom Span` created in the NATS subscription has

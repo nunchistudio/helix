@@ -6,9 +6,13 @@ technical stacks, I've decided to put my knowledge and experiences into helix,
 so I can deliver a consistent and high quality of work. I hope it makes your
 development a little bit easier!
 
+**Implementations:**
+- [helix.go](https://github.com/nunchistudio/helix.go)
+
 By using helix, organizations can benefit from automatic distributed tracing,
 error recording, and event propagation across their stack with no additional
 lines of code!
+
 ![Event propagation with helix](./assets/screenshots/trace-distributed.png)
 
 ## Goals
@@ -61,4 +65,4 @@ subscription, the software is licensed under the [PolyForm Noncommercial License
 1.0.0](./LICENSE.md).
 
 - [Learn more about helix licensing](https://nunchi.studio/helix/licensing)
-- [Get in touch to subscribe to helix Enterprise Edition](support@nunchi.studio)
+- [Get in touch to subscribe to helix Enterprise Edition](mailto:support@nunchi.studio)

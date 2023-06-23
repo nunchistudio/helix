@@ -25,4 +25,5 @@ no additional development required on the application.
 
 By having a consistent event propagation across all services and integrations, an
 organization can benefit end-to-end observability much more easily:
+
 ![Your second trace with helix](/helix/screenshots/trace-distributed.png)
