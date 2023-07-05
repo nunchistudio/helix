@@ -11,6 +11,16 @@
       "description": "for distributed systems"
     },
     {
+      "id": "temporal",
+      "name": "Temporal",
+      "description": "for workflow orchestration"
+    },
+    {
+      "id": "vault",
+      "name": "Vault",
+      "description": "for secret management"
+    },
+    {
       "id": "postgres",
       "name": "PostgreSQL",
       "description": "as OLTP database"
@@ -19,17 +29,6 @@
       "id": "clickhouse",
       "name": "ClickHouse",
       "description": "as OLAP database"
-    },
-    {
-      "id": "vault",
-      "name": "Vault",
-      "description": "for secret management"
-    },
-    {
-      "id": "temporal",
-      "name": "Temporal",
-      "description": "for workflow orchestration",
-      "soon": true
     }
   ]
 }
