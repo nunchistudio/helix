@@ -11,5 +11,16 @@ types:
   - "version"
 
 scopes:
+  - "clickhouse"
   - "descriptions"
   - "ecosystem"
+  - "event"
+  - "errorstack"
+  - "logger"
+  - "nats"
+  - "postgres"
+  - "rest"
+  - "service"
+  - "temporal"
+  - "tracer"
+  - "vault"

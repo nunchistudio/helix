@@ -13,6 +13,7 @@ secret manager for helix services.
 The `vault` integration sets the following trace attributes:
 - `vault.server.address`
 - `vault.agent.address`
+- `vault.namespace`
 - `span.kind`
 
 When applicable, these attributes can be set as well:
@@ -23,6 +24,7 @@ Example:
 ```
 vault.server.address: "http://localhost:8200"
 vault.agent.address: ""
+vault.namespace: "custom"
 vault.kv.mountpath: "/secrets"
 vault.kv.secretpath: "my_secret"
 span.kind: "internal"
