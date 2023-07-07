@@ -44,6 +44,29 @@ net.sock.peer.port: 50643
 span.kind: "server"
 ```
 
+## Health check
+
+The `rest` integration allows to pass a custom HTTP handler function for health
+check. It is exposed at `GET /health`.
+
+Example:
+```sh
+$ curl --request GET \
+  --url http://localhost:8080/health
+```
+
+By default if no custom function is passed, the `rest` integration retrieves the
+health status of each integration attached to the service running the `rest`
+integration, and returns the highest HTTP status code returned. This means if all
+integrations are healthy (status `200`) but one is temporarily unavailable (status
+`503`), the HTTP status code would be `503`, and therefore the response body of
+the health check would be:
+```json
+{
+	"status": "Service Unavailable"
+}
+```
+
 ## Usage
 
 {% tab name="Go" %}
