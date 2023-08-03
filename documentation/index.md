@@ -14,7 +14,7 @@ a little bit easier!
 helix acts as a library you can import in your code. Implementations:
 - [Go](https://github.com/nunchistudio/helix.go)
 
-# Use cases
+## Use cases
 
 helix was developed with the following use cases in mind:
 
