@@ -1,19 +1,20 @@
 # helix
 
-helix is how I build and maintain reliable, cloud-native, high-performance
-microservices. After years of working with different organizations and various
-technical stacks, I've decided to put my knowledge and experiences into helix,
-so I can deliver a consistent and high quality of work. I hope it makes your
-development a little bit easier!
+helix is how I build and maintain reliable, cloud-native, high-performance (micro)
+services. After years of working with different organizations and various technical
+stacks, I've decided to put my knowledge and experiences into helix, so I can
+deliver a consistent and high quality of work. I hope it makes your development
+a little bit easier!
 
-**Implementations:**
-- [helix.go](https://github.com/nunchistudio/helix.go)
+helix acts as a library you can import in your code. Implementations:
+- [Go](https://github.com/nunchistudio/helix.go)
 
-By using helix, organizations can benefit from automatic distributed tracing,
-error recording, and event propagation across their stack with no additional
-lines of code!
+# Use cases
 
-![Event propagation with helix](./assets/screenshots/trace-distributed.png)
+helix was developed with the following use cases in mind:
+
+- Consistent and high-performance (micro) services;
+- Effortless end-to-end observability and event tracking across services.
 
 ## Goals
 
@@ -37,9 +38,9 @@ helix was developed with the following goals in mind:
 
 ## Features and benefits
 
-helix provides an opinionated way to develop microservices. At its core, it relies
-on specifications and concepts such as OpenTelemetry and event propagation across
-services and integrations.
+helix provides an opinionated way to develop (micro) services. At its core, it
+relies on specifications and concepts such as OpenTelemetry and event propagation
+across services and integrations.
 
 - **Automatic distributed tracing and error recording:** All integrations implement
   distributed tracing and error recording automatically, following OpenTelemetry
@@ -57,6 +58,12 @@ services and integrations.
   specifications can optionally be leveraged for data validation. This can happen
   in the REST router for request/response validation against an OpenAPI description,
   or in other integrations for message validation against an AsyncAPI description.
+
+By using helix, organizations can benefit from automatic distributed tracing,
+error recording, and event propagation across their stack with no additional
+lines of code! This highly improves developer experience and velocity.
+
+![Event propagation with helix](./assets/screenshots/trace-distributed.png)
 
 ## License
 
