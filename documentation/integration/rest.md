@@ -52,7 +52,7 @@ check. It is exposed at `GET /health`.
 Example:
 ```sh
 $ curl --request GET \
-  --url http://localhost:8080/health
+    --url http://localhost:8080/health
 ```
 
 By default if no custom function is passed, the `rest` integration retrieves the
@@ -63,7 +63,7 @@ integrations are healthy (status `200`) but one is temporarily unavailable (stat
 the health check would be:
 ```json
 {
-	"status": "Service Unavailable"
+  "status": "Service Unavailable"
 }
 ```
 
