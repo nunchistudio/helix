@@ -47,6 +47,11 @@ properties:
     description: |
       Unique identifier of the group triggering the event.
     example: "60d58518-78b3-4739-afa5-71e2dab2b91f"
+  tenant_id:
+    type: "string"
+    description: |
+      Unique identifier of the tenant triggering the event.
+    example: "34a1860a-8aac-403b-a8f9-74dffeb1be71"
   subscriptions:
     type: "array"
     description: |
@@ -58,6 +63,9 @@ properties:
         id:
           type: "string"
           example: "sub_2NqIQtvdSEyPnDJl09eZGCajDDj"
+        tenant_id:
+          type: "string"
+          example: "34a1860a-8aac-403b-a8f9-74dffeb1be71"
         customer_id:
           type: "string"
           example: "cus_2NqITqoYLIGSR7Ac06Sd6saihUm"
