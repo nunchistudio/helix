@@ -15,7 +15,6 @@ The integration works with all PostgreSQL-compatible databases, such as:
 - [YugabyteDB](https://www.yugabyte.com/)
 - [Neon](https://neon.tech/)
 - [Google AlloyDB](https://cloud.google.com/alloydb)
-- [Amazon Redshift](https://aws.amazon.com/redshift/)
 - [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 
 ## Trace attributes
