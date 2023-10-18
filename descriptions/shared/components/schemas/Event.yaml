@@ -4,7 +4,7 @@ x-go-type: "event.Event"
 x-go-type-import:
   path: "go.nunchi.studio/helix/event"
 properties:
-  name:
+  id:
     type: "string"
     description: |
       Unique identifier of the event.
