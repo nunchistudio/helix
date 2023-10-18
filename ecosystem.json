@@ -13,7 +13,7 @@
     {
       "id": "temporal",
       "name": "Temporal",
-      "description": "for workflow orchestration"
+      "description": "for durable executions"
     },
     {
       "id": "vault",
