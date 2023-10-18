@@ -18,9 +18,9 @@ When applicable, these attributes can be set as well:
 - `nats.message.subject`
 - `nats.subscription.subject`
 - `nats.subscription.queue`
-- `nats.consumer.name`
-- `nats.consumer.group`
-- `nats.consumer.subject`
+- `nats.jetstream.consumer.name`
+- `nats.jetstream.consumer.ordered`
+- `nats.jetstream.consumer.subjects`
 - `nats.jetstream.stream.name`
 - `nats.jetstream.stream.subjects`
 - `nats.jetstream.kv.key`
