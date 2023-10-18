@@ -7,6 +7,11 @@ properties:
   name:
     type: "string"
     description: |
+      Unique identifier of the event.
+    example: "ef7af3f9-77b1-4455-9994-ddefe909de41"
+  name:
+    type: "string"
+    description: |
       Name of the event that a client (user, device) has performed.
     example: "user.registered"
   meta:
