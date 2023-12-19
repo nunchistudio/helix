@@ -29,6 +29,11 @@
       "id": "clickhouse",
       "name": "ClickHouse",
       "description": "as OLAP database"
+    },
+    {
+      "id": "openfeature",
+      "name": "OpenFeature",
+      "description": "for standardized feature flags"
     }
   ]
 }
