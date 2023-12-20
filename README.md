@@ -67,9 +67,4 @@ lines of code! This highly improves developer experience and velocity.
 
 ## License
 
-Unless you (or your organization) have an active **helix Enterprise Edition**
-subscription, the software is licensed under the [PolyForm Noncommercial License
-1.0.0](./LICENSE.md).
-
-- [Learn more about helix licensing](https://nunchi.studio/helix/licensing)
-- [Get in touch to subscribe to helix Enterprise Edition](mailto:support@nunchi.studio)
+Repository licensed under the [MIT License](./LICENSE.md).
