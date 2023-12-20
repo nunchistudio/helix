@@ -11,6 +11,7 @@ types:
   - "version"
 
 scopes:
+  - "bucket"
   - "clickhouse"
   - "descriptions"
   - "ecosystem"
