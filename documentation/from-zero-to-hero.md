@@ -78,11 +78,11 @@ OpenTelemetry collector endpoint is exposed at `localhost:7021`.
 
 ## Your first service
 
-helix requires the environment variable `OTEL_TRACES_ENDPOINT` to properly run.
-This represents the endpoint for the OpenTelemetry trace collector. If you followed
-the local setup above, you should run:
+helix requires the environment variable `OTEL_EXPORTER_OTLP_TRACES_ENDPOINT` to
+properly run. This represents the endpoint for the OpenTelemetry trace collector.
+If you followed the local setup above, you should run:
 ```sh
-$ export OTEL_TRACES_ENDPOINT=localhost:7021
+$ export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=localhost:7021
 ```
 
 {% callout level="warning" iconType="warning" title="Warning" %}
@@ -124,7 +124,7 @@ should see your first trace:
 ![Your first trace with helix](/helix/screenshots/trace-simple.png)
 
 It's important to notice here that the only observability step we did on the
-application side is to set the environment variable `OTEL_TRACES_ENDPOINT`.
+application side is to set the environment variable `OTEL_EXPORTER_OTLP_TRACES_ENDPOINT`.
 Other than that, tracing was fully automated!
 
 This is only the beginning. We'll now discover automatic distributed tracing and

@@ -20,8 +20,9 @@ helix relies on the following required environment variables:
   When value is one of `local`, `localhost`, `dev`, `development`, the logger
   handles logs at `debug` level and higher. Otherwise, the logger handles logs at
   `info` level and higher.
-- `OTEL_TRACES_ENDPOINT` sets the target endpoint the trace exporter will connect
-  to. See [example using Grafana Agent](#grafana-agent) below for more details.
+- `OTEL_EXPORTER_OTLP_TRACES_ENDPOINT` sets the target endpoint the trace exporter
+  will connect to. See [example using Grafana Agent](#grafana-agent) below for
+  more details.
 
 ## Telemetry packages
 
