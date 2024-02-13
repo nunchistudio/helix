@@ -28,7 +28,7 @@ helix relies on the following required environment variables:
 
 ### Traces
 
-When possible, it's strongly advised to leverage [Event propagation](/helix/event)
+When possible, it's strongly advised to leverage [Event propagation](/helix/event-propagation)
 within distributed tracing.
 
 {% tab name="Go" %}

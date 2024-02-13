@@ -19,7 +19,7 @@ helix acts as a library you can import in your code. Implementations:
 helix was developed with the following use cases in mind:
 
 - Consistent and high-performance (micro) services;
-- Effortless end-to-end observability and event tracking across services.
+- Effortless end-to-end observability and event propagation across services.
 
 ## Goals
 
