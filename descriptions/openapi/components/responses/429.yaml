@@ -8,16 +8,9 @@ content:
           type: "string"
           example: "Too Many Requests"
         error:
+          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
+        metadata:
           type: "object"
-          x-go-type: "errorstack.Error"
-          x-go-type-import:
-            path: "go.nunchi.studio/helix/errorstack"
-          properties:
-            message:
-              type: "string"
-              example: "Request-rate limit has been reached"
-          required:
-            - "message"
       required:
         - "status"
         - "error"

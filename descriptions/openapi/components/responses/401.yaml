@@ -8,32 +8,9 @@ content:
           type: "string"
           example: "Unauthorized"
         error:
+          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
+        metadata:
           type: "object"
-          x-go-type: "errorstack.Error"
-          x-go-type-import:
-            path: "go.nunchi.studio/helix/errorstack"
-          properties:
-            message:
-              type: "string"
-              example: "You are not authorized to perform this action"
-            validations:
-              type: "array"
-              items:
-                type: "object"
-                properties:
-                  message:
-                    type: "string"
-                    example: "Security requirements must be set"
-                  path:
-                    type: "array"
-                    items:
-                      type: "string"
-                    example:
-                      - "request"
-                      - "headers"
-                      - "X-API-KEY"
-          required:
-            - "message"
       required:
         - "status"
         - "error"

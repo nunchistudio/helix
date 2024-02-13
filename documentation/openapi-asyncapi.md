@@ -17,12 +17,12 @@ Each object can be used as a `$ref` in your OpenAPI and AsyncAPI descriptions,
 such as:
 ```yaml
 get:
-  operationId: "healthcheck"
+  operationId: "custom"
   tags:
     - "System"
-  summary: "Health check"
+  summary: "Custom operation"
   description: |
-    Query health-related information of the HTTP API.
+    This is a custom oepration.
   responses:
     "200":
       description: "Ok"
@@ -56,12 +56,24 @@ by helix core and all integrations.
   file="/helix/descriptions/shared/components/schemas/Event.yaml"
 /%}
 
+{% schema specification="OpenAPI & AsyncAPI" name="Error" color="primary"
+  file="/helix/descriptions/shared/components/schemas/Error.yaml"
+/%}
+
 ## OpenAPI
 
 Below are objects compatible with OpenAPI designed for the the REST router
 integration.
 
 ### 2xx responses
+
+{% schema specification="OpenAPI" type="HTTP response" name="200" color="success"
+  file="/helix/descriptions/openapi/components/responses/200.yaml"
+/%}
+
+{% schema specification="OpenAPI" type="HTTP response" name="201" color="success"
+  file="/helix/descriptions/openapi/components/responses/201.yaml"
+/%}
 
 {% schema specification="OpenAPI" type="HTTP response" name="202" color="success"
   file="/helix/descriptions/openapi/components/responses/202.yaml"
@@ -77,6 +89,10 @@ integration.
   file="/helix/descriptions/openapi/components/responses/401.yaml"
 /%}
 
+{% schema specification="OpenAPI" type="HTTP response" name="402" color="warning"
+  file="/helix/descriptions/openapi/components/responses/402.yaml"
+/%}
+
 {% schema specification="OpenAPI" type="HTTP response" name="403" color="warning"
   file="/helix/descriptions/openapi/components/responses/403.yaml"
 /%}
@@ -87,6 +103,10 @@ integration.
 
 {% schema specification="OpenAPI" type="HTTP response" name="405" color="warning"
   file="/helix/descriptions/openapi/components/responses/405.yaml"
+/%}
+
+{% schema specification="OpenAPI" type="HTTP response" name="409" color="warning"
+  file="/helix/descriptions/openapi/components/responses/409.yaml"
 /%}
 
 {% schema specification="OpenAPI" type="HTTP response" name="413" color="warning"

@@ -1,4 +1,4 @@
-description: "Payload Too Large"
+description: "Payment Required"
 
 content:
   application/json:
@@ -6,7 +6,7 @@ content:
       properties:
         status:
           type: "string"
-          example: "Payload Too Large"
+          example: "Payment Required"
         error:
           $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
         metadata:

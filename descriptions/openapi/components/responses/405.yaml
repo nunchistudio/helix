@@ -8,16 +8,9 @@ content:
           type: "string"
           example: "Method Not Allowed"
         error:
+          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
+        metadata:
           type: "object"
-          x-go-type: "errorstack.Error"
-          x-go-type-import:
-            path: "go.nunchi.studio/helix/errorstack"
-          properties:
-            message:
-              type: "string"
-              example: "Resource does not support this method"
-          required:
-            - "message"
       required:
         - "status"
         - "error"

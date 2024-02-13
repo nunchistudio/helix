@@ -8,33 +8,9 @@ content:
           type: "string"
           example: "Bad Request"
         error:
+          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
+        metadata:
           type: "object"
-          x-go-type: "errorstack.Error"
-          x-go-type-import:
-            path: "go.nunchi.studio/helix/errorstack"
-          properties:
-            message:
-              type: "string"
-              example: "Failed to validate request"
-            validations:
-              type: "array"
-              items:
-                type: "object"
-                properties:
-                  message:
-                    type: "string"
-                    example: "Property \"name\" is missing"
-                  path:
-                    type: "array"
-                    items:
-                      type: "string"
-                    example:
-                      - "request"
-                      - "body"
-                      - "event"
-                      - "name"
-          required:
-            - "message"
       required:
         - "status"
         - "error"

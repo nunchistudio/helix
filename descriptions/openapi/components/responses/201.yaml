@@ -1,4 +1,4 @@
-description: "Accepted"
+description: "Created"
 
 content:
   application/json:
@@ -6,7 +6,7 @@ content:
       properties:
         status:
           type: "string"
-          example: "Accepted"
+          example: "Created"
         metadata:
           type: "object"
         data:

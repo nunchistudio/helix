@@ -1,4 +1,4 @@
-description: "Accepted"
+description: "OK"
 
 content:
   application/json:
@@ -6,10 +6,11 @@ content:
       properties:
         status:
           type: "string"
-          example: "Accepted"
+          example: "OK"
         metadata:
           type: "object"
         data:
           type: "object"
       required:
         - "status"
+        - "data"
