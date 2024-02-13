@@ -1,5 +1,8 @@
 # helix
 
+[![GitHub Release](https://img.shields.io/github/v/release/nunchistudio/helix)](https://github.com/nunchistudio/helix/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 helix is how I build and maintain reliable, cloud-native, high-performance (micro)
 services. After years of working with different organizations and various technical
 stacks, I've decided to put my knowledge and experiences into helix, so I can
