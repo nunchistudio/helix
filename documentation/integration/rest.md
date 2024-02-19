@@ -69,6 +69,12 @@ the health check would be:
 
 ## Usage
 
-{% tab name="Go" %}
-  {% partial file="helix-go/integration/rest.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/integration/rest.md" /%} 
+  {% /tab %}
+
+  {% tab name="TypeScript" %}
+    {% partial file="helix-ts/integration/rest.md" /%} 
+  {% /tab %}
+{% /tabs %}

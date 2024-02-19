@@ -6,15 +6,14 @@ title: "From zero to hero in 20′"
 # {% $markdoc.frontmatter.title %}
 
 In this tutorial we will setup a local OpenTelemetry stack for helix services.
-Then, we will create our first helix service: a HTTP API exposing a single endpoint.
-Finally, we will create a second helix service, with a publish/subscribe mechanism
-between the two services.
+Then, we will create our first helix service in Go: a HTTP API exposing a single
+endpoint. Finally, we will create a second helix service, with a publish/subscribe
+mechanism between the two services.
 
-At the end, you will be able to see how easy it is to use helix and how helix
-can automate most of your counterproductive tasks when working with multiple
-services.
+At the end, you will be able to see how easy it is to use helix and how helix can
+automate most of your counterproductive tasks when working with multiple services.
 
-{% callout level="success" iconType="launch" title="TLDR; Source code is on GitHub" %}
+{% callout level="success" iconType="bullseye" title="TLDR; Source code is on GitHub" %}
   Source code of this guide is available in the [`platform-starter` repository
   on GitHub](https://github.com/nunchistudio/platform-starter).
 {% /callout %}
@@ -85,7 +84,7 @@ If you followed the local setup above, you should run:
 $ export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=localhost:7021
 ```
 
-{% callout level="warning" iconType="warning" title="Warning" %}
+{% callout level="warning" iconType="alert" title="Warning" %}
   If the environment variable is not available from a service, traces will not be
   exported/collected. If this is the case you should see an error like this one
   (truncated for better visibility):
@@ -98,9 +97,11 @@ Now that you're all set with an OpenTelemetry stack, you can write your first
 helix service. This service will expose a HTTP endpoint on `POST /anything`,
 using the [REST router integration](/helix/integration/rest).
 
-{% tab name="Go" %}
-  {% partial file="helix-go/from-zero-to-hero-first.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/from-zero-to-hero-first.md" /%} 
+  {% /tab %}
+{% /tabs %}
 
 You now have a helix service up and running, exposing a HTTP API on
 `http://localhost:8080`. Let's try to request the `POST /anything` endpoint:
@@ -146,9 +147,11 @@ $ docker run -d -p 4222:4222 nats -js
 The `httpapi` service will publish a message via NATS JetStream on each and every
 HTTP requests made against the endpoint created earlier.
 
-{% tab name="Go" %}
-  {% partial file="helix-go/from-zero-to-hero-publish.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/from-zero-to-hero-publish.md" /%} 
+  {% /tab %}
+{% /tabs %}
 
 ### Your second service
 
@@ -157,9 +160,11 @@ NATS JetStream subject and receive all messages of the said subject. In this
 demo, all messages received will come from the HTTP endpoint of the `httpapi`
 service.
 
-{% tab name="Go" %}
-  {% partial file="helix-go/from-zero-to-hero-second.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/from-zero-to-hero-second.md" /%} 
+  {% /tab %}
+{% /tabs %}
 
 ### Event propagation in action
 
@@ -203,6 +208,6 @@ such as the queue and subject.
 To go a bit further with this example and discover helix step-by-step, you could:
 - Enable and configure OpenAPI validation for the REST router in the `httpapi`
   service;
-- Add another integration in the `subscriber` service (like PostgreSQL);
+- Add another integration in the `subscriber` service (such as PostgreSQL);
 - Run both services in Docker containers to explore logs using the Loki datasource
   in Grafana.

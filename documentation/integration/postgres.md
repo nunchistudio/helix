@@ -38,6 +38,8 @@ span.kind: "server"
 
 ## Usage
 
-{% tab name="Go" %}
-  {% partial file="helix-go/integration/postgres.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/integration/postgres.md" /%} 
+  {% /tab %}
+{% /tabs %}

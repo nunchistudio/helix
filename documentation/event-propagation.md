@@ -19,9 +19,15 @@ no additional development required on the application.
   within your own network, then this caveat may not apply.
 {% /callout %}
 
-{% tab name="Go" %}
-  {% partial file="helix-go/event-propagation.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/event-propagation.md" /%} 
+  {% /tab %}
+
+  {% tab name="TypeScript" %}
+    {% partial file="helix-ts/event-propagation.md" /%} 
+  {% /tab %}
+{% /tabs %}
 
 By having a consistent event propagation across all services and integrations, an
 organization can benefit end-to-end observability much more easily:

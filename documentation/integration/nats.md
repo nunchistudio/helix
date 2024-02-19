@@ -36,6 +36,8 @@ span.kind: "consumer"
 
 ## Usage
 
-{% tab name="Go" %}
-  {% partial file="helix-go/integration/nats.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/integration/nats.md" /%} 
+  {% /tab %}
+{% /tabs %}

@@ -32,6 +32,8 @@ openfeature.value: "blue"
 
 ## Usage
 
-{% tab name="Go" %}
-  {% partial file="helix-go/integration/openfeature.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/integration/openfeature.md" /%} 
+  {% /tab %}
+{% /tabs %}

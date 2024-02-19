@@ -31,9 +31,11 @@ helix relies on the following required environment variables:
 When possible, it's strongly advised to leverage [Event propagation](/helix/event-propagation)
 within distributed tracing.
 
-{% tab name="Go" %}
-  {% partial file="helix-go/opentelemetry-traces.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/opentelemetry-traces.md" /%} 
+  {% /tab %}
+{% /tabs %}
 
 {% accordion title="Running on Kubernetes" %}
   When running a service in Kubernetes, traces are automatically populated with
@@ -68,9 +70,11 @@ If environment variable `ENVIRONMENT` is one of `local`, `localhost`, `dev`,
 `development`, the logger handles logs at `debug` level and higher. Otherwise,
 the logger handles logs at `info` level and higher.
 
-{% tab name="Go" %}
-  {% partial file="helix-go/opentelemetry-logs.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/opentelemetry-logs.md" /%} 
+  {% /tab %}
+{% /tabs %}
 
 {% accordion title="Running on Kubernetes" %}
   When running a service in Kubernetes, logs are automatically populated with these

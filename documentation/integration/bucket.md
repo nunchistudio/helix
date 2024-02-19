@@ -38,6 +38,8 @@ span.kind: "client"
 
 ## Usage
 
-{% tab name="Go" %}
-  {% partial file="helix-go/integration/bucket.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/integration/bucket.md" /%} 
+  {% /tab %}
+{% /tabs %}

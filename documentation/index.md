@@ -5,41 +5,34 @@ title: "What is helix?"
 
 # {% $markdoc.frontmatter.title %}
 
-helix is how I build and maintain reliable, cloud-native, high-performance (micro)
-services. After years of working with different organizations and various technical
-stacks, I've decided to put my knowledge and experiences into helix, so I can
-deliver a consistent and high quality of work. I hope it makes your development
-a little bit easier!
+helix is a framework for building cloud-native, consistent, reliable, and
+high-performance (micro) services. It allows back-end engineers to simplify
+development of complex problems through a thin layer of abstraction that handles
+automatic logging, tracing, observability, and event propagation across services
+and integrations.
 
-helix acts as a library you can import in your code. Implementations:
-- [Go](https://github.com/nunchistudio/helix.go)
+helix acts as a package you can import in your code. Implementations:
+- [Go](https://github.com/nunchistudio/helix.go): for building micro-services
+  with all the benefits listed above.
+- [TypeScript](https://github.com/nunchistudio/helix.ts): for consuming public
+  types on the front-end exposed by micro-services.
 
 ## Use cases
 
 helix was developed with the following use cases in mind:
 
-- Consistent and high-performance (micro) services;
-- Effortless end-to-end observability and event propagation across services.
+- Engineers must be able to write and maintain cloud-native, consistent, reliable,
+  and high-performance (micro) services with no hassle.
+- Engineers must have the power to transparently leverage end-to-end observability
+  and event propagation across services and integrations.
+- Engineering and product teams must be able to understand the user journey, fix
+  customer issues, and improve user/platform/product experience together via
+  end-to-end observability.
+- Engineers must focus on the business logic. Technical challenges such as
+  consistency and observability must live outside the business logic of the
+  services.
 
-## Goals
-
-helix was developed with the following goals in mind:
-
-- The solution must be deployable anywhere and everywhere.
-- The solution must be easy to configure and operate.
-- The solution could exist in any and every language.
-- The solution must allow smooth onboarding and no lock-in.
-- The solution must provide a transparent layer of abstraction for end-to-end
-  observability.
-- The solution must be as light as possible, while still supporting out of the
-  box capabilities via integrations.
-  - Integrations capabilities must not overlap with one another.
-  - Integrations must be implemented in all languages supported. 
-  - Integrations must be as consistent as possible across languages.
-  - Integrations internal lifecycle must not be exposed to end-users.
-  - Configuration across integrations must be as easy and consistent as possible.
-  - Custom integrations must be possible in case built-in ones don't fit the
-    requirements of a company.
+![Event propagation with helix](https://nunchi.studio/helix/screenshots/trace-distributed.png)
 
 ## Features and benefits
 
@@ -64,8 +57,22 @@ across services and integrations.
   in the REST router for request/response validation against an OpenAPI description,
   or in other integrations for message validation against an AsyncAPI description.
 
-By using helix, organizations can benefit from automatic distributed tracing,
-error recording, and event propagation across their stack with no additional
-lines of code! This highly improves developer experience and velocity.
+## Goals
 
-![Event propagation with helix](/helix/screenshots/trace-distributed.png)
+To understand why helix is designed this way, it's important to understand the
+following goals in mind:
+
+- The solution must be deployable anywhere and everywhere.
+- The solution must be easy to configure and operate.
+- The solution could exist in any and every language.
+- The solution must allow smooth onboarding and no lock-in.
+- The solution must provide a transparent layer of abstraction for end-to-end
+  observability.
+- The solution must be as light as possible, while still supporting out of the
+  box capabilities via integrations.
+  - Integrations capabilities must not overlap with one another.
+  - Integrations must be as consistent as possible across languages.
+  - Integrations internal lifecycle must not be exposed to end-users.
+  - Configuration across integrations must be as easy and consistent as possible.
+  - Custom integrations must be possible in case built-in ones don't fit the
+    requirements of a company.

@@ -27,6 +27,8 @@ span.kind: "server"
 
 ## Usage
 
-{% tab name="Go" %}
-  {% partial file="helix-go/integration/clickhouse.md" /%} 
-{% /tab %}
+{% tabs %}
+  {% tab name="Go" %}
+    {% partial file="helix-go/integration/clickhouse.md" /%} 
+  {% /tab %}
+{% /tabs %}
