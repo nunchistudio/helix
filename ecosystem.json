@@ -23,12 +23,12 @@
     {
       "id": "postgres",
       "name": "PostgreSQL",
-      "description": "as OLTP database"
+      "description": "as transactional database"
     },
     {
       "id": "clickhouse",
       "name": "ClickHouse",
-      "description": "as OLAP database"
+      "description": "as real-time data warehouse"
     },
     {
       "id": "bucket",
