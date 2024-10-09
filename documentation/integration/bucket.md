@@ -12,6 +12,7 @@ The integration supports the following drivers:
 - AWS S3
 - Azure Blob Storage
 - Google Cloud Storage
+- MinIO
 - Local files
 
 ## Trace attributes
