@@ -1,16 +1,6 @@
-description: "Payment Required"
+description: Payment Required
 
 content:
   application/json:
     schema:
-      properties:
-        status:
-          type: "string"
-          example: "Payment Required"
-        error:
-          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
-        metadata:
-          type: "object"
-      required:
-        - "status"
-        - "error"
+      $ref: ../schemas/rest/402.yaml

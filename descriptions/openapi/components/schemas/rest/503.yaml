@@ -1,0 +1,21 @@
+type: object
+x-go-type: rest.Response
+x-go-type-import:
+  path: go.nunchi.studio/helix/integration/rest
+
+properties:
+  status:
+    type: string
+    default: Service Unavailable
+  error:
+    $ref: https://raw.githubusercontent.com/nunchistudio/helix/refs/heads/main/descriptions/shared/components/schemas/Error.yaml
+  metadata:
+    type:
+      - undefined
+      - object
+required:
+  - status
+  - error
+
+example:
+  status: Service Unavailable

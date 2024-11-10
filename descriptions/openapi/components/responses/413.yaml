@@ -1,16 +1,6 @@
-description: "Payload Too Large"
+description: Payload Too Large
 
 content:
   application/json:
     schema:
-      properties:
-        status:
-          type: "string"
-          example: "Payload Too Large"
-        error:
-          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
-        metadata:
-          type: "object"
-      required:
-        - "status"
-        - "error"
+      $ref: ../schemas/rest/413.yaml

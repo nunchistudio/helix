@@ -1,15 +1,6 @@
-description: "Created"
+description: Created
 
 content:
   application/json:
     schema:
-      properties:
-        status:
-          type: "string"
-          example: "Created"
-        metadata:
-          type: "object"
-        data:
-          type: "object"
-      required:
-        - "status"
+      $ref: ../schemas/rest/201.yaml

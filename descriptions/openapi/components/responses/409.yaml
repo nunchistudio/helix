@@ -1,16 +1,6 @@
-description: "Conflict"
+description: Conflict
 
 content:
   application/json:
     schema:
-      properties:
-        status:
-          type: "string"
-          example: "Conflict"
-        error:
-          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
-        metadata:
-          type: "object"
-      required:
-        - "status"
-        - "error"
+      $ref: ../schemas/rest/409.yaml

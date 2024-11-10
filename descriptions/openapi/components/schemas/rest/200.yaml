@@ -1,0 +1,21 @@
+type: object
+x-go-type: rest.Response
+x-go-type-import:
+  path: go.nunchi.studio/helix/integration/rest
+
+properties:
+  status:
+    type: string
+    default: OK
+  metadata:
+    type:
+      - undefined
+      - object
+  data:
+    type: object
+required:
+  - status
+  - data
+
+example:
+  status: OK

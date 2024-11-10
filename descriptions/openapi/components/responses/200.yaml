@@ -1,16 +1,6 @@
-description: "OK"
+description: OK
 
 content:
   application/json:
     schema:
-      properties:
-        status:
-          type: "string"
-          example: "OK"
-        metadata:
-          type: "object"
-        data:
-          type: "object"
-      required:
-        - "status"
-        - "data"
+      $ref: ../schemas/rest/200.yaml

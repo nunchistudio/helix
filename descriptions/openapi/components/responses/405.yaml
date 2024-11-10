@@ -1,16 +1,6 @@
-description: "Method Not Allowed"
+description: Method Not Allowed
 
 content:
   application/json:
     schema:
-      properties:
-        status:
-          type: "string"
-          example: "Method Not Allowed"
-        error:
-          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
-        metadata:
-          type: "object"
-      required:
-        - "status"
-        - "error"
+      $ref: ../schemas/rest/405.yaml

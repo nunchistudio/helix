@@ -1,16 +1,6 @@
-description: "Internal Server Error"
+description: Internal Server Error
 
 content:
   application/json:
     schema:
-      properties:
-        status:
-          type: "string"
-          example: "Internal Server Error"
-        error:
-          $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/shared/components/schemas/Error.yaml"
-        metadata:
-          type: "object"
-      required:
-        - "status"
-        - "error"
+      $ref: ../schemas/rest/500.yaml

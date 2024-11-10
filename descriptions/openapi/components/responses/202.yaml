@@ -1,15 +1,6 @@
-description: "Accepted"
+description: Accepted
 
 content:
   application/json:
     schema:
-      properties:
-        status:
-          type: "string"
-          example: "Accepted"
-        metadata:
-          type: "object"
-        data:
-          type: "object"
-      required:
-        - "status"
+      $ref: ../schemas/rest/202.yaml

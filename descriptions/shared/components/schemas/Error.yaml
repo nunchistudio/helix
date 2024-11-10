@@ -1,26 +1,27 @@
-type: "object"
-x-go-type: "errorstack.Error"
+type: object
+x-go-type: errorstack.Error
 x-go-type-import:
-  path: "go.nunchi.studio/helix/errorstack"
+  path: go.nunchi.studio/helix/errorstack
+
 properties:
   message:
-    type: "string"
-    example: "You are not authorized to perform this action"
+    type: string
+    example: You are not authorized to perform this action
   validations:
-    type: "array"
+    type: array
     items:
-      type: "object"
+      type: object
       properties:
         message:
-          type: "string"
-          example: "Security requirements must be set"
+          type: string
+          example: Security requirements must be set
         path:
-          type: "array"
+          type: array
           items:
-            type: "string"
+            type: string
           example:
-            - "request"
-            - "headers"
-            - "X-API-KEY"
+            - request
+            - headers
+            - X-API-KEY
 required:
-  - "message"
+  - message
