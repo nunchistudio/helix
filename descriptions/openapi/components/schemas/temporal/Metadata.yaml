@@ -1,0 +1,29 @@
+type: object
+x-go-type: temporalrest.Metadata
+x-go-type-import:
+  path: go.nunchi.studio/helix/integration/temporal/temporalrest
+
+properties:
+  workflow:
+    type: object
+    properties:
+      id:
+        type: string
+      run:
+        properties:
+          id:
+            type: string
+            format: uuid
+        required:
+          - id
+    required:
+      - id
+      - run
+required:
+  - workflow
+
+example:
+  workflow:
+    id: custom-workflow-id
+    run:
+      id: e55c6510-c7ee-48b4-892e-dc25c4d3c270

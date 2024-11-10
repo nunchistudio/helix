@@ -14,37 +14,44 @@ You will find below OpenAPI and AsyncAPI definitions of helix objects, shared
 across languages and integrations.
 
 Each object can be used as a `$ref` in your OpenAPI and AsyncAPI descriptions,
-such as:
+either as a "schema" object or as a whole response. Example:
 ```yaml
-get:
-  operationId: "custom"
+post:
+  operationId: custom
   tags:
-    - "System"
-  summary: "Custom operation"
+    - System
+  summary: Custom operation
   description: |
-    This is a custom oepration.
+    This is a custom operation.
   responses:
-    "200":
-      description: "Ok"
+    '202':
+      description: Accepted
       content:
         application/json:
           schema:
-            properties:
-              status:
-                type: "string"
-                example: "Ok"
-            required:
-              - "status"
-    "400":
-      $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/openapi/components/responses/400.yaml"
-    "401":
-      $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/openapi/components/responses/401.yaml"
-    "429":
-      $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/openapi/components/responses/429.yaml"
-    "500":
-      $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/openapi/components/responses/500.yaml"
-    "503":
-      $ref: "https://github.com/nunchistudio/helix/tree/main/descriptions/openapi/components/responses/503.yaml"
+            allOf:
+              - $ref: https://raw.githubusercontent.com/nunchistudio/helix/refs/heads/main/descriptions/openapi/components/schemas/rest/200.yaml
+              - type: object
+                properties:
+                  metadata:
+                    type: object
+                    properties:
+                      temporal:
+                        $ref: https://raw.githubusercontent.com/nunchistudio/helix/refs/heads/main/descriptions/openapi/components/schemas/temporal/Metadata.yaml
+                    required:
+                      - temporal
+                required:
+                  - metadata
+    '400':
+      $ref: https://raw.githubusercontent.com/nunchistudio/helix/refs/heads/main/descriptions/openapi/components/responses/400.yaml
+    '401':
+      $ref: https://raw.githubusercontent.com/nunchistudio/helix/refs/heads/main/descriptions/openapi/components/responses/401.yaml
+    '429':
+      $ref: https://raw.githubusercontent.com/nunchistudio/helix/refs/heads/main/descriptions/openapi/components/responses/429.yaml
+    '500':
+      $ref: https://raw.githubusercontent.com/nunchistudio/helix/refs/heads/main/descriptions/openapi/components/responses/500.yaml
+    '503':
+      $ref: https://raw.githubusercontent.com/nunchistudio/helix/refs/heads/main/descriptions/openapi/components/responses/503.yaml
 ```
 
 ## Shared objects
@@ -62,10 +69,12 @@ by helix core and all integrations.
 
 ## OpenAPI
 
+### REST integration
+
 Below are objects compatible with OpenAPI designed for the the REST router
 integration.
 
-### 2xx responses
+#### 2xx responses
 
 {% schema specification="OpenAPI" type="HTTP response" name="200" color="success"
   file="/helix/descriptions/openapi/components/responses/200.yaml"
@@ -79,7 +88,7 @@ integration.
   file="/helix/descriptions/openapi/components/responses/202.yaml"
 /%}
 
-### 4xx responses
+#### 4xx responses
 
 {% schema specification="OpenAPI" type="HTTP response" name="400" color="warning"
   file="/helix/descriptions/openapi/components/responses/400.yaml"
@@ -117,7 +126,7 @@ integration.
   file="/helix/descriptions/openapi/components/responses/429.yaml"
 /%}
 
-### 5xx responses
+#### 5xx responses
 
 {% schema specification="OpenAPI" type="HTTP response" name="500" color="danger"
   file="/helix/descriptions/openapi/components/responses/500.yaml"
@@ -125,4 +134,13 @@ integration.
 
 {% schema specification="OpenAPI" type="HTTP response" name="503" color="danger"
   file="/helix/descriptions/openapi/components/responses/503.yaml"
+/%}
+
+### Temporal integration
+
+Below are objects compatible with OpenAPI designed and scoped in the Temporal
+integration, and that can be returned in a HTTP response of a REST API.
+
+{% schema specification="OpenAPI" type="Temporal" name="Metadata" color="primary"
+  file="/helix/descriptions/openapi/components/schemas/temporal/Metadata.yaml"
 /%}
