@@ -46,4 +46,8 @@ span.kind: "internal"
   {% tab name="Go" %}
     {% partial file="helix-go/integration/temporal.md" /%} 
   {% /tab %}
+
+  {% tab name="TypeScript" %}
+    {% partial file="helix-ts/integration/temporal.md" /%} 
+  {% /tab %}
 {% /tabs %}
